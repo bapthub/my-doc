@@ -25,9 +25,10 @@ docker-compose up -d --build
 
 ou
 
+Version 2.0 de docker compose, pour les versions de docker >= 20.10.13
+
 ```shell
 docker compose up -d --build
-# Version 2.0 de docker compose, pour les versions de docker >= 20.10.13
 ```
 
 ### **Lancer un conteneur sans reinstaller les dépendances**

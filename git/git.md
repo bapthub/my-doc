@@ -12,46 +12,54 @@ git branch -M main
 
 ### Branches
 
+Créer une branche
+
 ```shell
 git branch <nomdebranche> 
-# créer une branche
 ```
+
+Changer de branche
 
 ```shell
 git checkout <nomdebranche> 
-# changer de branche
 ```
+
+Fusionner la branche courante avec la branche nommée
 
 ```shell
 git merge <nom de branche> 
-# fusionner la branche courante avec la branche nommée
 ```
+
+Mettre à jour le code
 
 ```shell
 git pull 
-# mettre à jour le code
 ```
+
+Mettre de côté des modifications
 
 ```shell
 git stash 
-# mettre de côté des modifications
 ```
+
+Liste les éléments mis de côtés avec la commande stash
 
 ```shell
 git stat list 
-# liste les éléments mis de côtés avec la commande stash
 ```
 
+Ajoute les éléments mis de côté dans le stash
+
 ```shell
-git stash apply <nom stash> 
-# ajoute les éléments mis de côté dans le stash
+git stash apply <nom stash>
 ```
 
 ### Commit et ajout de fichier
 
+Change le message du dernier commit
+
 ```shell
 git commit --amend -m <nouveau message de commit> 
-# change le message du dernier commit
 ```
 
 Ajouter des fichiers dans un commit ou les modifier :
@@ -61,14 +69,16 @@ Ajouter des fichiers dans un commit ou les modifier :
 
 ### Revenir en arrière
 
+Reviens au commit précédent
+
 ```shell
 git reset --hard HEAD^ 
-# reviens au commit précédent
 ```
+
+Reviens au commit du hash (à récupérer avec git log)
 
 ```shell
 git reset <hash du commit> <style de reset> 
-# reviens au commit du hash (à récupérer avec git log)
 ```
 
 #### Styles :
@@ -79,29 +89,34 @@ git reset <hash du commit> <style de reset>
 
 --soft : ne supprime aucun fichier, aucun commit après celui ciblé
 
+Annule le dernier push et en créer un nouveau
+
 ```shell
 git revert HEAD^ 
-# annule le dernier push et en créer un nouveau
 ```
+
+Annule le commit et en fait un nouveau
 
 ```shell
 git revert <hash commit> 
-# annule le commit et en fait un nouveau
 ```
+
+Reviens au commit du hash (à récupérer avec git log)
 
 ```shell
 git reset <hash du commit> <style de reset> 
-# reviens au commit du hash (à récupérer avec git log)
 ```
 
 ### Autres
 
+Donne le nom de tous ceux qui ont modifiés le fichier
+
 ```shell
-git blame <nom de fichier> 
-# donne le nom de tous ceux qui ont modifiés le fichier 
+git blame <nom de fichier>  
 ```
+
+Merge un commit donné avec la branche courante
 
 ```shell
 git cherry cherry-pick <hash du commit> 
-# merge un commit donné avec la branche courante
 ```
