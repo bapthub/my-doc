@@ -9,7 +9,7 @@ from sqlalchemy import Column, Integer, String, Float, Boolean,create_engine
 
 Base = declarative_base()
 
-class Sirene(Base):
+class Table(Base):
    __tablename__  = 'nom_de_table'
    __table_args__ = {'schema': 'nom_de_schema'}
    
@@ -20,6 +20,6 @@ class Sirene(Base):
    col5 = Column(String)
    geometry = Column(Geometry(geometry_type="POINT", srid='4326'))
 
-engine = create_engine('postgresql://'+user+":"+password+'@'+host+":"+port+'/'+base_postgis)
+engine = create_engine('postgresql://'+user+":"+password+'@'+host+":"+port+'/'+base)
 Base.metadata.create_all(engine)
 ```
